@@ -3,10 +3,12 @@ Author: Vali Mikayilov
 Matr.Nr.: K12037083
 Exercise 8
 """
+
+import numpy as np
+import pandas as pd
+import sys
+
 def count_bases_and_subsequence(data_as_string, subsequence):
-    """This function will scan the string 'data_as_string', count the
-    individual bases, and count an arbitrary subsequence of bases specified in
-    'subsequence'."""
 
     # We can convert the subsequence string to lower case letters to make the
     # subsequence count case insensitive:
@@ -142,13 +144,8 @@ def  get_file_metadata(data_as_string):
         if not x.startswith('%') and not x == '':
             raise AttributeError(f"AttributeError")
     return [id,date]
-#ex7.py end
-########################################################################################
-#My code goes below
-########################################################################################
-import numpy as np
-import pandas as pd
-import sys
+
+
 x=0
 
 command_line_args = sys.argv
