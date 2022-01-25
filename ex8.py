@@ -145,9 +145,7 @@ def  get_file_metadata(data_as_string):
             raise AttributeError(f"AttributeError")
     return [id,date]
 
-
 x=0
-
 command_line_args = sys.argv
 input_folder = command_line_args[1]
 output_file = command_line_args[2]
