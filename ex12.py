@@ -119,17 +119,17 @@ class GameOfLife(object):
 if __name__ == "__main__":
     import argparse
 
-    # Create a parser
+    # Creating a parser
     parser = argparse.ArgumentParser()
     parser.add_argument('configpath', help='configuration file', type=str)
     parser.add_argument('outputfile', help='file to write state to', type=str)
 
-    # Parse the arguments
+    # Parsing the arguments
     args = parser.parse_args()
     configpath = args.configpath
     outputfile = args.outputfile
 
-    # Create game instance
+    # Creating game instance
     game = GameOfLife(configpath=configpath, outputfile=outputfile)
 
     current_iteration = 0
@@ -138,5 +138,5 @@ if __name__ == "__main__":
             current_iteration = game.step()
             progressbar.update()
 
-    # Save video to file
+    # Saving video to file
     game.make_video(os.path.join(os.path.dirname(outputfile), "video"))
